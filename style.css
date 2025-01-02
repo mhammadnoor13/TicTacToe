@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --gap-percent:15px;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #95A3B3;
+}
+
+
+.container{
+    border-radius: 20px;
+    background-color: #4B4E6D;
+    width: 50%;
+    height: 95%;
+    display: grid;
+    grid-template-rows: 4fr 23fr 6fr;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 
+    0px 20px 25px rgba(0, 0, 0, 0.15), 
+    0px -5px 10px rgba(0, 0, 0, 0.05); 
+    overflow: hidden;
+}
+.turn{
+    grid-row: 1;
+    color: #FFFFFF;
+    font-family: "Bubblegum Sans",serif;
+    display: flex;
+    font-size: 60px;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    cursor:alias;
+}
+
+.board{
+    grid-row: 2 ;
+    display: grid;
+    gap: var(--gap-percent);
+    padding: 20px 30px;
+    
+}
+
+.grid-cell{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-family: "Knewave", serif;
+    font-weight: 100;
+
+
+}
+
+.grid-cell:hover{
+    background-color: #D2D3DB; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.control-options{
+    grid-row: 3;
+    background-color: #84DCC6;
+    display: grid;
+    grid-template-rows: 5fr 4fr;
+    padding: 7px 0;
+}
+.options{
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+
+    
+}
+label{
+    font-family: "Bubblegum Sans",serif;
+    font-size: 40px;
+    color: #222222;
+}
+
+input{
+    color: #222222;
+    overflow: hidden;
+    width: 10%;
+    height: 60%;
+    padding-left: 2%;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Bubblegum Sans",serif;
+    border-radius: 10%;
+    border: none;
+    outline: none;
+
+}
+
+input:focus{
+    border: 1px solid #222222;
+}
+
+.options-btns{
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%
+}
+.reset-btn{
+    width: 20%;
+    height: 80%;
+    font-family: "Bubblegum Sans",serif;
+    border-radius: 5px;
+    border: none;
+    font-size: 30px;
+    padding: 2px ;
+    cursor: pointer;
+
+}
+
+.reset-btn:hover{
+    outline: none;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5), 
+                0px 4px 15px rgba(255, 255, 255, 0.2); /* Glow and shadow */
+}
+
+.highlight-cell {
+    background-color: #FF9F1C; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 
+                -5px -5px 15px rgba(255, 255, 255, 0.5); 
+    transform: scale(1.04); 
+    transition: all 0.7s ease-in-out; 
+}
+
+.inactive-cell {
+    pointer-events: none; 
+    cursor: default; 
+    transform: none; 
+}

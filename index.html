@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+   <div class="container">
+     <h1 class="turn"></h1>
+     <div class="board">
+     </div>
+     <div class="control-options">  
+      <div class="options">
+        <label for="size-num">Number of Rows/Columns</label>
+        <input class ="size-num" name ="size-num" type="number" value="3" min="3" max="10" placeholder="Please enter a number between 3 and 10 ">
+      </div>
+      <div class="options-btns">
+        <button class="reset-btn">Start Over</button>
+      </div>
+     </div>
+   </div>
+   <script src="script.js"></script>
+  </body>
+</html>
