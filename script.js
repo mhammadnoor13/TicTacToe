@@ -53,11 +53,11 @@ function Cell(){
     if(value=="O")
     {
       color="#F71735";
-      delta =1;
+      delta =-1;
     }
     else{
       color="#222222";
-      delta=-1;
+      delta=1;
     }
   }
   const getValue = ()=>value;
